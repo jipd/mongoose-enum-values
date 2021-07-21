@@ -1,15 +1,2 @@
-export default function (schema, options) {
-  schema.statics.getEnumValues = function (fieldName) {
-    const fieldDef = this.schema.paths[fieldName];
-
-    if (!fieldDef) {
-      throw new Error(`Mongoose plugin mongoose-enum-values failed to find path ${fieldName} in schema`);
-    }
-
-    return {
-      values: fieldDef.enumValues,
-      default: fieldDef.defaultValue
-    };
-  };
-}
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports["default"]=_default;function _default(a){a.statics.getEnumValues=function(a){var b=this.schema.paths[a];if(!b)throw new Error("Mongoose plugin mongoose-enum-values failed to find path ".concat(a," in schema"));return{values:b.enumValues,default:b.defaultValue}}}
 //# sourceMappingURL=index.js.map
